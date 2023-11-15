@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Scrap</title>
+    <link rel="shortcut icon" href="/Img/propic1.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript">
+        function text() {
+            prompt("Please enter your experience here", "");
+        }
+    </script>
+</head>
+
+<body>
+    <header class="navbar"></header>
+    <main>
+        <div class="container">
+            <div class="leftcontainer">
+                <h2>ABOUT US</h2>
+                <!--paragraph-->
+                <p id="su">
+                    At <strong>ECO SCRAP</strong> , we're on a mission to revolutionize the way we handle scrap
+                    materials and
+                    contribute to a cleaner, greener world. With over a decade of experience in the scrap recycling
+                    industry, we
+                    have become a trusted name, known for our commitment to sustainability and exceptional customer
+                    service.
+                </p>
+                <!--reviews button-->
+                <button type="button" id="review" class="re_button" onclick="text()"><strong>REVIEWS</strong> </button>
+            </div>
+            <div class="rightcontainer">
+                <!--recycle image-->
+                <img src="/Img/recycle_image.png" id="image" alt="recycle image" width="400">
+                <!--contact us button-->
+                <button type="button" id="contact" class="contact_us" onclick="showPopup()"><strong>CONTACT US</strong>
+                </button>
+                <div id="popup" class="overlay">
+                    <div class="popup-content">
+                        <address>
+                            <p>Contact the author of this page:</p>
+                            <a href="mailto:ecoscrap@gmail.com">ecoscrap@gmail.com</a><br>
+                            <a href="tel:+13115552368">(311) 555-2368</a>
+                        </address>
+                        <button id="close" onclick="closePopup()">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="navbar.js"></script>
+</body>
+<script>
+    function showPopup() {
+        document.getElementById("popup").style.display = "block";
+    }
+
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+    }
+</script>
+
+</html>

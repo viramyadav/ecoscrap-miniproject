@@ -1,0 +1,187 @@
+<nav id="navbar">
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fa fa-bars" id="btn"></i>
+        <i class="fa fa-times" id="cancel"></i>
+    </label>
+
+    <img src="/Img/propic1.jpg" id="logo" alt="Logo">
+
+    <ul>
+        <li><a href="home.html">Home</a> </li>
+        <li><a href="schedule.html">Schedule</a> </li>
+        <li><a href="items.html">Rates</a> </li>
+        <li><a href="about.html">About us</a> </li>
+        <li><a href="/reviews.html">Reviews</a> </li>
+    </ul>
+    <img src="/Img/sun.png" alt="Light" width="40px" id="Lightbulb">
+    <img src="/Img/moon.png" alt="Dark" width="40px" id="Darkbulb" class="hide">
+</nav>
+
+<style>
+    /******This is the css code for navbar****** */
+
+    .hide{
+        display: none;
+    }
+
+    /* Dark mode styles */
+    body.dark-mode {
+        background-color: #1a1a1a;
+        color: white;
+    }
+
+    .dark-mode #navbar {
+        background-color: #1d3825;
+    }
+
+    .dark-mode #navbar ul li a {
+        color: white;
+    }
+
+    header {
+        height: 115px;
+        /* position: fixed; */
+    }
+
+    #navbar {
+        height: 80px;
+        background-color: #fffefc;
+        border-radius: 0 0 30px 30px;
+        box-shadow: 5px 5px 5px #3fc833;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    #navbar #logo {
+        position: absolute;
+        top: 4%;
+        left: 10%;
+        width: 90px;
+        border-radius: 50%;
+        border: 2px solid rgb(165, 23, 197);
+        filter: invert(100%);
+        z-index: 3;
+        transition: transform 1.5s ease-in;
+    }
+
+    #navbar #logo:hover {
+        border: none;
+        transform: translateX(500%);
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+    }
+
+    #navbar ul li {
+        margin: 0 20px;
+    }
+
+    #navbar ul li a {
+        color: black;
+        font-weight: bold;
+        font-size: 15px;
+        text-transform: uppercase;
+        text-decoration: none;
+        position: relative;
+    }
+
+    #navbar ul li a::after {
+        content: "";
+        display: block;
+        background-color: #3fc833;
+        height: 4px;
+        width: 100%;
+        transform-origin: left;
+        transform: scaleX(0);
+        transition: transform 0.8s ease;
+    }
+
+    #navbar ul li a:hover::after {
+        transform: scaleX(1);
+    }
+
+    label #btn,
+    #cancel {
+        display: none;
+    }
+
+    #check {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        #navbar #logo {
+            width: 70px;
+            float: right;
+        }
+
+        #navbar ul {
+            position: absolute;
+            top: 85px;
+            left: 0;
+            width: 100%;
+            background: #1d3825;
+            flex-direction: column;
+            display: none;
+            opacity: 0.7;
+            z-index: 2;
+        }
+
+        #navbar ul li {
+            display: block;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        #navbar ul li a {
+            font-size: 14px;
+            color: white;
+        }
+
+        #navbar ul li a:before {
+            bottom: -1px;
+            height: 2px;
+        }
+
+        #navbar ul li a:hover:before {
+            transform: scaleX(1.2);
+        }
+
+        #navbar ul li a:hover {
+            text-decoration: none;
+        }
+
+        #check:checked~ul {
+            display: flex;
+        }
+
+        label #btn {
+            display: block;
+        }
+
+        #check:checked~label #btn {
+            display: none;
+        }
+
+        #check:checked~label #cancel {
+            display: block;
+        }
+
+        #navbar label {
+            order: 1;
+            margin-left: auto;
+            margin-right: 3%;
+        }
+    }
+
+    .chats {
+        text-align: center;
+        margin-top: 5%;
+    }
+</style>
+<!-- <script src="active.js"></script> -->

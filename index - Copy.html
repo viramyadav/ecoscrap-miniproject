@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/1dc6e27830.js" crossorigin="anonymous"></script>
+    <title>Eco Scrap</title>
+    <link rel="shortcut icon" href="/Img/propic1.jpg" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="ls">
+            <div class="SignUp">
+                Sign Up
+            </div>
+            <div class="login">
+                Login
+            </div>
+        </div>
+        <label class="switch">
+            <input type="checkbox" id="mls">
+            <span class="slider round"></span>
+        </label>
+    </div>
+
+    <div class="SignupForm Form">
+        <form>
+            <h2> Sign Up</h2>
+           <input type="text" placeholder=" &#xf007;        Name" id="name" required> 
+           <input type="number" placeholder=" &#xf095;       Phone Number" id="no" required>
+           <input type="email" placeholder=" &#xf0e0;        Email" class="email" required>
+           <input type="password" placeholder=" &#xf023;        Password" class="pass" required>
+           <button>Register</button>
+        </form>
+    </div>
+
+    <div class="card">
+        <img id="front" src="/Img/card-front.png" alt="Green Card">
+        <img id="back" src="/Img/card-back.png" alt="Green Card">
+        <p id="outname"></p>
+        <p id="outno"></p>
+        <p id="outemail"></p>
+    </div>
+
+    <div class="LoginForm Form">
+        <form>
+            <h2>Login</h2>
+            <input type="email" placeholder="&#xf0e0;       Email" class="email" required>
+            <input type="password" placeholder="&#xf023;        Password" class="pass" required>
+            <a href="/home.html"><button id="login">Login</button></a>
+            <p>Forgot your password??</p>
+        </form>
+    </div>
+
+    <!-- Script Tag -->
+    <script src="index.js" defer></script>
+</body>
+</html>

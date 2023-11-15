@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #B6EF95;
+    color: black;
+    /* font-family: ; */
+}
+
+body{
+    max-width: 100vw;
+    height:100vh;
+    background-image:url(/Img/RegisterLoginbgpic.jpg);
+    background-size: cover;
+}
+.SignUp{
+font-size: 25px;
+font-weight: bold;
+
+}
+
+.login{
+    font-size: 25px;
+    font-weight: bold;
+
+    }
+
+::placeholder {
+    color: black;
+}
+
+.container {
+    width: 30%;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5px;
+
+}
+
+.ls {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.ls div {
+    margin: 8px 30px;
+}
+
+/* *****Construction of the toggle key***** */
+
+/* Label */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 90px;
+    height: 34px;
+}
+
+/* checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /* background-color: #ccc; */
+    border: 3px solid #00FF00;
+}
+
+/* Image Container */
+.slider::before {
+    position: absolute;
+    content: "\f062";
+    color: #00FF00;
+    background-color: black;
+    transform: rotate(-30deg);
+    font-family: "FontAwesome";
+    height: 26px;
+    width: 26px;
+    top: 2px;
+    left: 4px;
+    /* To center the icon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in 0.5s;
+}
+
+input:checked+.slider::before {
+    transform: translate(0%) rotate(-30deg);
+    animation: Forward 1s linear forwards;
+}
+
+@keyframes Forward {
+    0% {
+        transform: translate(0) rotate(-30deg);
+    }
+
+    100% {
+        transform: translate(210%) rotate(390deg);
+    }
+}
+
+input:not(:checked)+.slider::before {
+    transform: translate(210%) rotate(390deg);
+    animation: Backward 1s linear forwards;
+}
+
+@keyframes Backward {
+    0% {
+        transform: translate(210%) rotate(390deg);
+    }
+
+    100% {
+        transform: translate(0) rotate(-30deg);
+    }
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round::before {
+    border-radius: 50%;
+}
+
+/* Toggle Key Over */
+
+
+
+
+/* SignUp Form */
+.Form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    z-index: 2;
+    margin-top: 25px;
+    box-shadow: 2px 0 15px #2c6b34;
+    border-radius: 17%;
+}
+
+.SignupForm form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 14%;
+    border: 5px double #00FF00;
+    border-radius: 17%;
+}
+
+.SignupForm form h2 {
+    margin-bottom: 20px;
+}
+
+.SignupForm form input {
+    width: 120%;
+    margin: 2%;
+    padding: 4%;
+    font-family: "FontAwesome";
+    font-style: normal;
+    font-weight: 100;
+}
+
+form input:focus {
+    font-family: 'Times New Roman', Times, serif;
+    font-size:medium;
+}
+
+.SignupForm form button {
+    margin-top: 20px;
+    width: 60%;
+    padding: 2%;
+}
+
+/* Card */
+
+.card img{
+    width: 300px;
+    float: right;
+    position: absolute;
+}
+/* #front{
+    display: block;
+}
+#back{
+    display: none;
+} */
+
+.card p{
+    position: absolute;
+    top: 11.3%;
+    left: 12%;
+    color: black;
+    background-color: #34C48C;
+    z-index: 6;
+    font-size: 12px;
+}
+#outname{
+    position: absolute;
+    top: 11.3%;
+    left: 12%;
+    font-size: 15px;
+}
+
+#outno{
+    position: absolute;
+    top: 18.5%;
+    left: 12%;
+}
+
+#outemail{
+    position: absolute;
+    top: 20.5%;
+    left: 12%;
+}
+
+/* Login Form */
+
+.LoginForm form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 26% 20%;
+    border: 5px double #00FF00;
+    border-radius: 17%;
+}
+
+.LoginForm form h2 {
+    margin-bottom: 20px;
+}
+
+.LoginForm form input {
+    width: 120%;
+    margin: 6px;
+    padding: 5%;
+    font-family: "FontAwesome";
+    font-size: 10px;
+}
+
+.LoginForm form button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 5%;
+}
+
+.hide{
+    display: none;
+}

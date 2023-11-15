@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color: white;
+    --color: black;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.dark-mode .popup-content{
+    color: black;
+}
+
+/*********************This is the css code for the page************************* */
+.container {
+    width: 100%;
+    display: flex;
+}
+
+.leftcontainer {
+    width: 50%;
+}
+
+.rightcontainer {
+    position: relative;
+    width: 50%;
+}
+
+
+#su {
+    min-width: 363px;
+    margin: 2% 10% 2% 8%;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+h2 {
+    margin: 6% auto 6% 8%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#review {
+    margin: 8% 8%;
+}
+
+.re_button {
+    background-color: #3fc833;
+    border: none;
+    padding: 20px;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.re_button:hover {
+    text-decoration: underline;
+    color: #fff;
+    background-color: #46a049;
+}
+
+#image {
+    position: absolute;
+    right: 10%;
+    top: 2%;
+}
+
+#contact {
+    position: absolute;
+    right: 15%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+
+.contact_us {
+    background-color: #3fc833;
+    border: none;
+    color: black;
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.contact_us:hover {
+    text-decoration: underline;
+    /* color: #e2dfdf95; */
+    color: #fff;
+    background-color: #46a049;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* this is for contact us pop up */
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.popup-content h2 {
+    margin-top: 0;
+}
+
+.popup-content p {
+    margin: 0;
+}
+
+#close {
+    background-color: #3fc833;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    margin: 12px 70px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .leftcontainer {
+        width: 100%;
+    }
+
+    .rightcontainer {
+        width: 100%;
+    }
+}
